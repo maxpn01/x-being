@@ -44,12 +44,6 @@ process.stdin.on("data", (data) => {
     return;
   }
 
-  const normalized = input.toLowerCase();
-  if (normalized === "exit" || normalized === "quit") {
-    emit("log", "👋 shutting down");
-    process.exit(0);
-  }
-
   emit("input", { text: input });
 });
 

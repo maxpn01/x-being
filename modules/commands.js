@@ -33,10 +33,17 @@ on("input", ({ text }) => {
         console.log(`- /stats    - Show memory statistics`);
         console.log(`- /clear    - Clear short-term memory`);
         console.log(`- /help     - Show this help`);
-        console.log(`- exit/quit - Shutdown gracefully`);
+        console.log(`- /exit     - Shutdown gracefully`);
         console.log();
         promptUser();
         return;
+      }
+
+      case "exit": {
+        console.log();
+        emit("log", "Shutting down via /exit");
+        console.log();
+        process.exit(0);
       }
 
       default: {
