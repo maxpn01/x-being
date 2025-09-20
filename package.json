@@ -1,0 +1,13 @@
+{
+  "name": "tiny_ai",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "node-fetch": "^3.3.2",
+    "openai": "^5.3.0",
+    "yaml": "^2.8.0"
+  }
+}
